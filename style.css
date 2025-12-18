@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f6d365, #b768ef);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  width: 360px;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.amount p,
+.from p,
+.to p {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  color: #555;
+}
+
+form input {
+  height: 3rem;
+  padding: 0 0.8rem;
+  border-radius: 0.7rem;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #af4d98;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown i {
+  font-size: 1.4rem;
+  color: #af4d98;
+  margin-top: 1.5rem;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid #ddd;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.6rem;
+  background: #f9f9f9;
+}
+
+.select-container img {
+  width: 28px;
+}
+
+.select-container select {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.msg {
+  text-align: center;
+  background: #f4f0fa;
+  color: #333;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+}
+
+form button {
+  height: 3.2rem;
+  background: linear-gradient(135deg, #af4d98, #8e44ad);
+  color: white;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+form button:active {
+  transform: scale(0.97);
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+body.dark {
+  background: linear-gradient(135deg, #232526, #414345);
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+body.dark input,
+body.dark select {
+  background: #2c2c2c;
+  color: #eee;
+  border-color: #555;
+}
+
+body.dark .msg {
+  background: #2a2a2a;
+  color: #ddd;
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .dropdown {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .dropdown i {
+    transform: rotate(90deg);
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+
+
